@@ -10,159 +10,206 @@ html{
    *::after {
     box-sizing: inherit;
    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow:auto
+}
 
-:root{
+html{
     --main-color: #fef6e4;
     --button-color:#f582ae;
+    --nav-color:#f3d2c186;
     --header-color:#001858;
     --body-text-color:#172c66;
     --background-color:#f3d2c1;
-    background-color: var(--background-color);
-}
-
-body {
-    margin:0;
+    --secondary-color:#8bd3dd;
+    background-color: var(--main-color);
     font-family: 'Raleway', sans-serif;
-    height:100vh;
-    position: relative;
+    letter-spacing: -0.025em;
 }
 
-a{
+body{
+    margin: 0;
+    padding:0;
+    width:100%;
+    min-height:568px;
+    min-width:320px;
+}
+
+
+ul{
+    list-style: none;
+}
+
+ul li a{
     text-decoration: none;
-    color:var(--c0)
-}
-h1{
-    font-size: 200%;
 }
 
-h3{
-    font-size: 150%;
-    color:var(--body-text-color)
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-button{
-    font-family: 'Raleway', sans-serif;
-    appearance: none;
-    border-radius: 0.5rem;
-    text-transform:uppercase;
-}
-
-#start{
-    padding:0.5rem;
-    font-weight: 600;
-    background-color: var(--button-color);
-    color: var(--body-text-color);
-    height:40px;
-    width:80px;
-    border:none;
+.icon-text span {
+    display: block;
     text-align: center;
 }
-#start:hover{
-    background-color: var(--body-text-color);
-    color:var(--background-color)
-}
-/* header */
-header{
-    display:flex;
-    align-items:center;
-    justify-content: space-around;
-    width:100%;
-    background-color: var(--c1);
-    color:var(--header-color);
-    margin-top:-3em;
-    padding-top:3.5em;
-    height:9rem;
-    position:fixed;
-}
+nav ul{
+    padding-left: 0;
+} 
+@media only screen and (min-width: 980px){
 
-@media screen and (max-width:980px){
-    header, main{
-        padding-left:3rem;
-        padding-right: 3rem;
+    .questions-container{
+        max-width:600px;
+        display:flex;
+        flex-direction: column;
+        align-items: center; 
+        position: relative;
+        text-align: center;    
+    }
+    .questions-container #description{
+        text-align: center;
     }
 }
+@media only screen and (max-width: 980px) {
+    body{
+        display:block;
+        width:100%;
+        justify-content: center;
+        height:100vh;
+    }
 
-nav ul{
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    justify-items: center;
+   
+
+    h1{
+        font-size:4vw;
+    }
+
+    main{
+        margin:0;
+        width:100%;
+        display:flex;
+        text-align: center;
+        height: calc(100% - 100px);
+    }
+    .questions-container{
+        max-width: 400px;
+        font-size:100%;
+        margin-top: 0;
+        padding-top:2rem;
+        overflow-y: hidden;
+    }
 }
+  
 
-nav ul li{
-    font-size:130%;
-    margin:0 1rem;
-    padding:0.5rem 1rem;
-    text-transform:uppercase;
-    z-index:1;
-    position:relative;
-}
 
-nav  ul li:hover{
-    color:var(--button-color);
-}
-
-/* main section从这里开始 */
 main{
     display:flex;
     justify-content: center;
-    align-items:center;
     height:100vh;
-}
-
-/* question container */
-.questions-container{
-    text-align:center;
-    background-color: var(--main-color);
-    height:auto;
-    max-width:800px;
-    padding:2rem;
-    border: var(--body-text-color) solid 5px;
-    border-radius: 10px;
-}
-
-.next, .back{
-    display:inline-block;
-    margin:1.5rem;
-    background-color: var(--c1);
-    color:var(--c0);
-    display:hidden;
-}
-
-/* styling checkbox */
-input[type="checkbox"] {
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-/* styling radio */
-input[type="radio"] {
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-label {
-    font-family: 'Raleway', sans-serif;
-    font-size: 150%;
-    display:inline-flex;
+    display:flex;
     align-items: center;
-    justify-content: center;
-    padding:0.5rem 1rem;
-    border-radius: 10px;
+}
+
+.next, .back, #submit, #start, #return{
+    display:inline-block;
+    margin:0.5rem;
+    display:hidden;
+    border:none;
+    color:var(--body-text-color);
+    background-color: var(--background-color);
+    padding:0.5rem;
+    transition: 0.3s;
+}
+#start:hover, #submit:hover, #return:hover{
+    background-color: var(--button-color);
+}
+
+.next:hover, .back:hover{
+    background-color: var(--body-text-color);
+    color:var(--background-color);
+}
+
+input[type="checkbox"], input[type="radio"]{
+    display:none;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label, input[type="radio"]:checked + label{
+    background-color:var(--background-color);
+    outline:var(--body-text-color) 2px solid;
+    transition:0.3s;
+}
+
+
+#question1 label, #question2 label, #question3 label, #question5 label{
+    font-family: 'Raleway', sans-serif;
+    font-size: 130%;
+    display:block;
+    padding:0.5rem;
+    cursor: pointer;
+    margin: 20px;
+    color: var(--body-text-color);
+    transition:0.3s;
 }
 
 label:hover{
-    background-color:var(--button-color);
-    border:none;
-}
-
-#question3 label{
-    display:grid;
+    background-color: var(--background-color);
 
 }
-
-#question4:not(div,h3){
-    display:grid;
-    grid-template-columns: repeat(6,50px);
-    grid-template-rows: repeat(3,1fr);
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    align-items:center;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width:100%;
 }
+
+.grid-container label{
+    padding:1em 0;
+    color:var(--body-text-color);
+    font-size:1.3em;
+}
+
+#result{
+    overflow: scroll;
+}
+#result #video-container{
+    display:flex;
+    justify-items: center;
+    max-width:700px;
+    max-height: 600px;
+}
+  #result #video-container .pngbox {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px 0;
+  }
+  #result #video-container .pngbox #thumbnail {
+    display: block;
+    width:300px;
+    height: 200px;
+    object-fit: cover;
+  }
+  #result #video-container p {
+    text-align: left;
+    padding-left:1em;
+    max-width:200px;
+    color:var(--body-text-color);
+    text-decoration: none;
+  }
+
+  a{
+    color:var(--body-text-color);
+    text-decoration: none;
+  }

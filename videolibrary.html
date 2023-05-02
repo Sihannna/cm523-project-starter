@@ -9,25 +9,276 @@
     <!-- PUT A DESCRIPTION IN HERE -->
     <meta name="description" content="Unlimited Fitness is designed to make fitness accessible to anyone, anywhere, at any time. With a vast library of workout plans, personalized coaching, and instructional videos, our platform offers something for everyone, whether you are an experienced athlete or just starting out. At Unlimited Fitness, we believe that fitness is not just limited in gym, but a way of life. " />
     <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
-    <link rel="stylesheet" href="styles.normalize.css" />
+    <link rel="stylesheet" href="styles.normalize.css"/>
     <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <!-- LINK TO YOUR STYLES -->
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="/styles/videolibrary.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/nav.css">
     <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
     <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
-    <script src="scripts/scripts.js" defer></script>
+
   </head>
   <body>
     <!-- YOUR HTML GOES HERE -->
     <header>
-      <h1>Unlimited Fitness</h1>
-      <nav>
+      <h1>Unlimited Workout</h1>
+       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="videolibrary.html">Video Library</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
+          <li>
+            <a href="index.html">
+              <span class="icon-text">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </span>
+            </a>
+          </li>
+            <li>
+              <a href="videolibrary.html">
+                <span class="icon-text">
+                  <i class="fas fa-video"></i>
+                  <span>Video Library</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html">
+                <span class="icon-text">
+                  <i class="fas fa-info-circle"></i>
+                  <span>About</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
     </header>
+
+    <section>
+      <div class="buttons">
+        <button type="button" data-btn="0">All</button>
+        <button type="button" data-btn="4">Core Workout</button>
+        <button type="button" data-btn="5">Full Body Workout</button>
+        <button type="button" data-btn="7">Lower Body Workout</button>
+        <button type="button" data-btn="8">Upper Body Workout</button>
+        <button type="button" data-btn="9">Stretching</button>
+      </div>
+      <div class="video">
+        <ul class="cards">
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=1f8yoFFdkcY" data-video="4">
+              <div class="card_container">
+                  <img class="card" src="/images/10 MIN BEGINNER AB WORKOUT :: No Equipment | Pamela Reif.jpeg" alt="10 MIN BEGINNER AB WORKOUT // No Equipment | Pamela Reif">
+                  <p>10 MIN BEGINNER AB WORKOUT // No Equipment | Pamela Reif</p>
+              </div>
+            </a >
+          </li>
+  
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=QKCkO9fy9O4" data-video="4">
+            <div class="card_container">
+                <img class="card" src="/images/10 MIN STANDING ABS WORKOUT | Get Ab Lines & Slim Waist ~ Emi.jpeg" alt="10 MIN STANDING ABS WORKOUT | Get Ab Lines & Slim Waist ~ Emi">
+                <p>10 MIN STANDING ABS WORKOUT | Get Ab Lines & Slim Waist ~ Emi</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=OuBMFYx5ncE" data-video="4">
+            <div class="card_container">
+                <img class="card" src="/images/DAY 3 of EPIC | Bodyweight Core & Abs Workout.jpeg" alt="DAY 3 of EPIC | Bodyweight Core & Abs Workout">
+                <p>DAY 3 of EPIC | Bodyweight Core & Abs Workout</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=zzD80vCLq0Y" data-video="4">
+            <div class="card_container">
+                <img class="card" src="/images/Best Home Ab Workout | 10 Minutes (GUARANTEED!).jpeg" alt="Best Home Ab Workout | 10 Minutes (GUARANTEED!)">
+                <p>Best Home Ab Workout | 10 Minutes (GUARANTEED!)</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=yz4u_pklMQ0" data-video="4,5">
+            <div class="card_container">
+                <img class="card" src="/images/30 MIN ABS & HIIT CARDIO AT HOME WORKOUT - NO EQUIPMENT | 6 WEEK SHRED – DAY 18.jpeg" alt="30 MIN ABS & HIIT CARDIO AT HOME WORKOUT - NO EQUIPMENT">
+                <p>30 MIN ABS & HIIT CARDIO AT HOME WORKOUT - NO EQUIPMENT | 6 WEEK SHRED – DAY 18</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=IT94xC35u6k&t=623s" data-video="5">
+            <div class="card_container">
+                <img class="card" src="/images/20 min Fat Burning Workout for TOTAL BEGINNERS.jpeg" alt="20 min Fat Burning Workout for TOTAL BEGINNERS">
+                <p>20 min Fat Burning Workout for TOTAL BEGINNERS</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=ow3hpYJqYEI" data-video="5">
+            <div class="card_container">
+                <img class="card" src="/images/30 MIN WALKING CARDIO WORKOU.jpeg" alt="30 MIN WALKING CARDIO WORKOUT">
+                <p>30 MIN WALKING CARDIO WORKOUT</p>
+            </div>
+            </a>
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=vJS9a1mpYGw" data-video="4,5">
+            <div class="card_container">
+                <img class="card" src="/images/3 MILE FAST Walking to Lose Belly Fat (burns 600 calories!).jpeg" alt="3 MILE FAST Walking to Lose Belly Fat,burns 600 calories!">
+                <p>3 MILE FAST Walking to Lose Belly Fat (burns 600 calories!)</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=nG69wuXHwxg" data-video="7">
+            <div class="card_container">
+                <img class="card" src="/images/10 MIN BEGINNER LEG WORKOUT .. with breaks! Booty, Thighs & Hamstrings : No Equipment I Pamela Reif.jpeg" alt="10 MIN BEGINNER LEG WORKOUT .. with breaks! Booty, Thighs & Hamstrings / No Equipment">
+                <p>10 MIN BEGINNER LEG WORKOUT .. with breaks! Booty, Thighs & Hamstrings / No Equipment I Pamela Reif</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=q7rCeOa_m58" data-video="7">
+            <div class="card_container">
+                <img class="card" src="/images/20 Min Complete Home Leg Workout | Follow Along.png" alt="20 Min Complete Home Leg Workout | Follow Along">
+                <p>20 Min Complete Home Leg Workout | Follow Along</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=VddSvgcmBz0" data-video="4,7">
+            <div class="card_container">
+                <img class="card" src="/images/45 MIN BOOTY, ABS + FAT BURN - intense combo for the ultimate burn I LIVE Workout I Pamela Reif.jpeg" alt="45 MIN BOOTY, ABS + FAT BURN - intense combo for the ultimate burn I LIVE Workout I Pamela Reif">
+                <p>45 MIN BOOTY, ABS + FAT BURN - intense combo for the ultimate burn I LIVE Workout I Pamela Reif</p>
+            </div>
+            </a>
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=2eA2Koq6pTI" data-video="5,9">
+            <div class="card_container">
+              <img class="card" src="/images/15 Min. Full Body Stretch | Daily Routine for Flexibility, Mobility & Relaxation | DAY 7.jpeg" alt="15 Min. Full Body Stretch | Daily Routine for Flexibility, Mobility & Relaxation | DAY 7">
+              <p>15 Min. Full Body Stretch | Daily Routine for Flexibility, Mobility & Relaxation | DAY 7</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=2eA2Koq6pTI" data-video="5,9">
+            <div class="card_container">
+                <img class="card" src="/images/Back Pain Relief Stretches | 10 min. Yoga for Relaxation & Recovery.jpeg" alt="Back Pain Relief Stretches | 10 min. Yoga for Relaxation & Recovery">
+                <p>Back Pain Relief Stretches | 10 min. Yoga for Relaxation & Recovery</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=DHOPWvO3ZcI" data-video="8">
+            <div class="card_container">
+                <img class="card" src="/images/10 MIN UPPER BODY WORKOUT - Back, Arms & Chest : No Equipment I Pamela Reif.jpeg" alt="10 MIN UPPER BODY WORKOUT - Back, Arms & Chest / No Equipment I Pamela Reif">
+                <p>10 MIN UPPER BODY WORKOUT - Back, Arms & Chest / No Equipment I Pamela Reif</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=mm47bCaCzpQ" data-video="8">
+            <div class="card_container">
+                <img class="card" src="/images/20 MINUTE UPPER BODY WORKOUT(NO EQUIPMENT).jpeg" alt="20 MINUTE UPPER BODY WORKOUT(NO EQUIPMENT)">
+                <p>20 MINUTE UPPER BODY WORKOUT(NO EQUIPMENT)</p>
+            </div>
+            </a >
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=BHNtFY-MSnU" data-video="5">
+              <div class="card_container">
+                <img class="card" src="/images/1 Hour FULL BODY WORKOUT at Home | No Jumping, No Equipment, No Repeat.jpeg">
+                <p>1 Hour FULL BODY WORKOUT at Home | No Jumping, No Equipment, No Repeat</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=TfK0ylCoGMo" data-video="5">
+              <div class="card_container">
+                <img class="card" src="https://i.ytimg.com/vi/aXuKc8KlQ5w/maxresdefault.jpg">
+                <p>1 HOUR FULL BODY WORKOUT at home - No Jumping - No Repeat - No Equipment - Low Impact HIIT</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=I88jaPCdFus" data-video="7">
+              <div class="card_container">
+                <img class="card" src="https://i.ytimg.com/vi/I88jaPCdFus/maxresdefault.jpg">
+                <p>40 Minute LEG DAY SMASHER to BUILD MUSCLE|No Repeats|No Equipment|#CrockFitApp</p>
+              </div>
+            </a>
+          </li>
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=uNILu4KSHQM" data-video="8">
+              <div class="card_container">
+                <img class="card" src="https://i.ytimg.com/vi/uNILu4KSHQM/maxresdefault.jpg">
+                <p>10 MIN SITTING ARM & SHOULDER WORKOUT (ON COUCH / BED WHILE WATCHING TV) ~ Emi</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=4q8TBBNzjoc" data-video="8,5">
+              <div class="card_container">
+                <img class="card" src="https://i.ytimg.com/vi/4q8TBBNzjoc/maxresdefault.jpg">
+                <p>DAY 4: 30 MIN UPPER BODY BURNER Workout - No Equipment, No Repeat - 7 DAY HIIT CHALLENGE</p>
+              </div>
+            </a>
+          </li>
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=B682hNNuPng" data-video="5,9">
+              <div class="card_container">
+                <img class="card" src="https://i.ytimg.com/vi/B682hNNuPng/maxresdefault.jpg">
+                <p>30 minute Full Body Yoga Stretch for STRESS & ANXIETY Relief</p>
+              </div>
+            </a>
+          </li>
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=WI4K1g7JfZI&t=175s" data-video="7">
+              <div class="card_container">
+                <img class="card" src="https://i.ytimg.com/vi/WI4K1g7JfZI/maxresdefault.jpg">
+                <p>LOW IMPACT BOOTY & LEG WORKOUT - no squats, no lunges, no equipment (16 min)</p>
+              </div>
+            </a>
+          </li>
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=X4MchDHkJWw" data-video="9">
+              <div class="card_container">
+                <img class="card" src="https://i.ytimg.com/vi/X4MchDHkJWw/maxresdefault.jpg">
+                <p>45 min Slow Flow DEEP STRETCH Yoga for Flexibility - STRETCH & RELAX</p>
+              </div>
+            </a>
+          </li>
+          <li class="cardcontent">
+            <a href="https://www.youtube.com/watch?v=SEzrLNj63UI" data-video="8">
+              <div class="card_container">
+                <img class="card" src="https://i.ytimg.com/vi/SEzrLNj63UI/maxresdefault.jpg">
+                <p>[6 minutes] Make a beautiful back, shoulders and neck! Easy exercise that you can sit down</p>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+    <script src="/scripts/videolibrary.js"></script>
   </body>
 </html>

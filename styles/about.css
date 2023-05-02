@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    box-sizing: border-box;
+   }
+   *,
+   *::before,
+   *::after {
+    box-sizing: inherit;
+   }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    --main-color: #fef6e4;
+    --button-color:#f582ae;
+    --nav-color:#f3d2c186;
+    --header-color:#001858;
+    --body-text-color:#172c66;
+    --background-color:#f3d2c1;
+    --secondary-color:#8bd3dd;
+    background-color: var(--main-color);
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: -0.025em;
+}
+p{
+    color:var(--body-text-color);
+    margin: 1rem 0;
+    font-size:1.2em;
+}
+
+h2{
+    color:var(--header-color);
+}
+
+@media only screen and (min-width: 980px){
+    body:not(header){
+        display:grid;
+        place-content: center;
+    }
+    main {
+        margin-left: 200px;
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
+        max-width:700px;
+        width: 100%;
+        overflow: auto;
+        grid-gap:1em;
+    }
+    #project-description{
+        grid-column: 1 /span 2;
+    }
+    .container {
+        margin: 20px;
+    }
+    #project-description{
+        padding-top:6rem;
+    }
+    #sources h2,#documents h2{
+        margin-bottom:1rem;
+    }
+    
+}
+@media only screen and (max-width: 980px) {
+    body{
+        display:block;
+        width:100%;
+        justify-content: center;
+        height:100vh;
+    }
+    main{
+        display:flex;
+        flex-wrap: wrap;
+        max-width:500px;
+        margin:0 auto;
+        margin-bottom:3rem;
+    }
+    #project-description{
+        padding-top:2rem;
+    }
+    #sources ul, #documents ul{
+        display:flex;
+        flex-wrap: wrap;
+        margin-top:1rem;
+    }
+
+}
+  
+.container ul li a:hover{
+    color:var(--button-color);
+    transition:0.5s;
+}
+
+.container ul li a{
+    color:var(--body-text-color);
+    font-size:1.1em;
+}
+
+.container ul li{
+    font-size:110%;
+    padding-right:2em;
+    padding-bottom:1rem;
+}

@@ -5,145 +5,179 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- PUT A TITLE IN HERE -->
-    <title>Unlimited Fitness</title>
+    <title>Unlimited Workout</title>
     <!-- PUT A DESCRIPTION IN HERE -->
-    <meta name="description" content="Unlimited Fitness is designed to make fitness accessible to anyone, anywhere, at any time. With a vast library of workout plans, personalized coaching, and instructional videos, our platform offers something for everyone, whether you are an experienced athlete or just starting out. At Unlimited Fitness, we believe that fitness is not just limited in gym, but a way of life. " />
+    <meta name="description" content="Unlimited Workout is designed to make fitness accessible to anyone, anywhere, at any time. With a vast library of workout plans, personalized coaching, and instructional videos, our platform offers something for everyone, whether you are an experienced athlete or just starting out. At Unlimited Fitness, we believe that fitness is not just limited in gym, but a way of life. " />
     <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
-    <link rel="stylesheet" href="styles.normalize.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
     <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <!-- LINK TO YOUR STYLES -->
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/nav.css">
     <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
     <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
-    <script src="scripts/scripts.js" defer></script>
+
   </head>
   <body>
     <!-- YOUR HTML GOES HERE -->
     <header>
-      <h1>Unlimited Fitness</h1>
-      <nav>
+      <h1>Unlimited Workout</h1>
+       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="videolibrary.html">Video Library</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
+          <li>
+            <a href="index.html">
+              <span class="icon-text">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </span>
+            </a>
+          </li>
+            <li>
+              <a href="videolibrary.html">
+                <span class="icon-text">
+                  <i class="fas fa-video"></i>
+                  <span>Video Library</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html">
+                <span class="icon-text">
+                  <i class="fas fa-info-circle"></i>
+                  <span>About</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
     </header>
 
-    <main>
-      
+    <main class="page-content">
       <div class="questions-container">
-        <div id="progress-bar"></div>
+        <div id="progress-bar" style="display:none">
+        </div>
+        <div id="steps"></div>
+
         <!-- opening -->
         <div id="description">
-          <h3>Answer the following questions to generate a perfect fitness plan for today!</h3>
-          <button id="start" onclick="startQuiz()">Start</button>
+          <h3>Answer the following questions to find a perfect workout tutorial for today!</h3>
+          <button id="start">Start</button>
         </div>
 
         <div id="questionCarousel">
           <!-- question1 -->
           <div id="question1" class="hidden" style="display:none">
-            <h3>What are your fitness goals for today? Select all that apply.</h3>
-            <input type="checkbox" id="q1buildingMuscles" name="question1" value="buildingMuscles">
-            <label for="q1buildingMuscles" class="customize-radio-btn">Building Muscles</label>
-            <input type="checkbox" id="q1losingWeight" name="question1" value="losingWeight">
-            <label for="q1losingWeight" class="customize-radio-btn">Losing Weight</label>
-            <input type="checkbox" id="q1stretching" name="question1" value="stretching">
-            <label for="q1stretching" class="customize-radio-btn">Stretching</label>
+            <h3>What are your workout goals for today?</h3>
+            <input type="radio" id="q1buildingMuscles" name="goals" value="buildingMuscles">
+            <label for="q1buildingMuscles">Building Muscles</label>
+            <input type="radio" id="q1losingWeight" name="goals" value="losingWeight">
+            <label for="q1losingWeight">Losing Weight</label>
+            <input type="radio" id="q1stretching" name="goals" value="stretching">
+            <label for="q1stretching">Stretching</label>
             
             <div class="button-container">
-              <button class="back" onclick="showPreviousQuestion()">Back</button>
-              <button class="next" onclick="showNextQuestion()">Next</button>
+              <button class="back">Back</button>
+              <button class="next">Next</button>
             </div>
           </div>
         
           <!-- question2 -->
           <div id="question2" class="hidden" style="display:none">
-            <h3>What is your fitness experience?</h3>
-            <input type="radio" id="q2beginner" name="question2" value="beginner">
-            <label for="q2beginner">Beginner</label>
-            <input type="radio" id="q2intermediate" name="question2" value="intermediate">
-            <label for="q2intermediate">Intermediate</label>
-            <input type="radio" id="q2advanced" name="question2" value="advanced">
-            <label for="q2advanced">Advanced</label>
+            <h3>What is your workout experience?</h3>
+            <div class="fitnessGoal">
+              <input type="radio" id="q2beginner" name="intensity" value="beginner">
+              <label for="q2beginner">Beginner</label>
+              <input type="radio" id="q2intermediate" name="intensity" value="intermediate">
+              <label for="q2intermediate">Intermediate</label>
+              <input type="radio" id="q2advanced" name="intensity" value="advanced">
+              <label for="q2advanced">Advanced</label>
+            </div>
             <div class="button-container">
-              <button class="back" onclick="event.preventDefault(); showPreviousQuestion()">Back</button>
-              <button class="next" onclick="event.preventDefault(); showNextQuestion()">Next</button>
+              <button class="back" >Back</button>
+              <button class="next">Next</button>
             </div>
           </div>
           
           <!-- question 3 -->
           <div id="question3" class="hidden" style="display:none">
             <h3>How long do you want to exercise today?</h3>
-            <input type="radio" id="q3lessthan30min" name="question3" value = "lessThan30min">
-            <label for="q3lessThan30min">Less than 30 minutes</label>
-            <input type="radio" id="q330to60min" name="question3" value = "30to60min">
-            <label for="q330to60min">30 to 60 minutes</label>
-            <input type="radio" id="q360to90min" name="question3" value = "60to90min">
-            <label for="q360to90min">60 to 90 minutes</label>
-            <input type="radio" id="q3morethan90min" name="question3" value = "morethan90min">
-            <label for="q3morethan90min">more than 90 minutes</label>
+            <div class="workoutDuration">
+              <input type="radio" id="q3lessthan30min" name="duration" value = "lessthan30min">
+              <label for="q3lessthan30min">Less than 30 minutes</label>
+              <input type="radio" id="q330to60min" name="duration" value = "30to60min">
+              <label for="q330to60min">30 to 60 minutes</label>
+            </div>
             <div class="button-container">
-              <button class="back" onclick="showPreviousQuestion()">Back</button>
-              <button class="next" onclick="showNextQuestion()">Next</button>
+              <button class="back">Back</button>
+              <button class="next">Next</button>
             </div>
           </div>
 
           <!-- question 4-->
           <div id="question4" class="hidden" style="display:none">
-            <h3>Which parts of your body do you want to train? Select all that apply.</h3>
-            <input type="checkbox" id="q4arms" name="question4" value="arms">
-            <label for="q4arms">Arms</label>
-            <input type="checkbox" id="q4back" name="question4" value="back">
-            <label for="q4back">Back</label>
-            <input type="checkbox" id="q4butt" name="question4" value="butt">
-            <label for="q4butt">Butt</label>
-            <input type="checkbox" id="q4chest" name="question4" value="chest">
-            <label for="q4chest">Chest</label>
-            <input type="checkbox" id="q4core" name="question4" value="core">
-            <label for="q4core">Core</label>
-            <input type="checkbox" id="q4fullBody" name="question4" value="fullBody">
-            <label for="q4fullBody">Full Body</label>
-            <input type="checkbox" id="q4legs" name="question4" value="legs">
-            <label for="q4legs">Legs</label>
-            <input type="checkbox" id="q4lowerBody" name="question4" value="lowerBody">
-            <label for="q4lowerBody">Lower Body</label>
-            <input type="checkbox" id="q4upperBody" name="question4" value="upperBody">
-            <label for="q4upperBody">Upper Body</label>
+            <h3>Which parts of your body do you want to train?</h3>
+            <div id="bodyParts">
+              <div class="grid-container">
+                <input type="radio" id="q4arms" name="bodyParts" value="arms">
+                <label for="q4arms">Arms</label>
+                <input type="radio" id="q4back" name="bodyParts" value="back">
+                <label for="q4back">Back</label>
+                <input type="radio" id="q4booty" name="bodyParts" value="booty">
+                <label for="q4booty">Booty</label>
+                <input type="radio" id="q4abs" name="bodyParts" value="abs">
+                <label for="q4abs">Abs</label>
+                <input type="radio" id="q4fullBody" name="bodyParts" value="fullBody">
+                <label for="q4fullBody">Full Body</label>
+                <input type="radio" id="q4legs" name="bodyParts" value="legs">
+                <label for="q4legs">Legs</label>
+                <input type="radio" id="q4lowerBody" name="bodyParts" value="lowerBody">
+                <label for="q4lowerBody">Lower Body</label>
+                <input type="radio" id="q4upperBody" name="bodyParts" value="upperBody">
+                <label for="q4upperBody">Upper Body</label>
+              </div>
+            </div>
+            
             <div class="button-container">
-              <button class="back" onclick="showPreviousQuestion()">Back</button>
-              <button class="next" onclick="showNextQuestion()">Next</button>
+              <button class="back">Back</button>
+              <button class="next">Next</button>
+            </div>
+          </div>
+          
+          <!-- question5 -->
+          <div id="question5" class="hidden"  style="display:none">
+            <h3>What equipment do you want to include for today's workout?</h3>
+            <div id = "equipment">
+              <input type="radio" id="q5none" name="equipment" value="none">
+              <label for="q5none">None</label>
+              <input type="radio" id="q5yogaMat" name="equipment" value="yogaMat">
+             <label for="q5yogaMat">Yoga Mat</label>
+            </div>
+            
+            <div class="button-container">
+              <button class="back">Back</button>
+              <button id="submit">Generate my video!</button>
             </div>
           </div>
 
-          <div id="question5" class="hidden" style="display:none">
-            <h3>Do you have any health conditions or physical limitations? Select all that apply.</h3>
-            <input type="checkbox" id="q5jointPain" name="question5" value="jointPain">
-            <label for="q5jointPain">Joint pain or injury</label>
-            <input type="checkbox" id="q5backPain" name="question5" value="backPain">
-            <label for="q5backPain">Pack pain or injury</label>
-            <input type="checkbox" id="q5hearDisease" name="question5" value="heartDisease">
-            <label for="q5hearDisease">Heart disease or high blood pressure</label>
-            <input type="checkbox" id="q5diabetes" name="question5" value="diabetes">
-            <label for="q5diabetes">Diabetes</label>
-            <input type="checkbox" id="q5asthma" name="question5" value="asthma">
-            <label for="q5asthma">Asthma or breathing difficulties</label>
-            <input type="checkbox" id="q5other" name="question5" value="other">
-            <label for="q5other">Other </label>
-            <input type="checkbox" id="q5none" name="question5" value="none">
-            <label for="q5none">none</label>
-            <div class="button-container">
-              <button class="back" onclick="showPreviousQuestion()">Back</button>
-              <button class="next" onclick="showNextQuestion()">Next</button>
-            </div>
-          </div>
-          <button id="submit" style="display:none" onclick="result()">Generate my plan!</button>
         </div>
+        <div id="result" style="display:none">
+          <h3>Try these tutorials!</h3>
+          <br>
+          <div id="video-container">
+          <div class="resultbox"></div>
+          </div>
+          <button id="return">Return to Start</button>
+        </div>
+        
       </div>
       
 
     </main>
 
     <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
+    <script src="scripts/scripts.js"></script>
   </body>
+
+
 </html>
