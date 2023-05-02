@@ -24,14 +24,18 @@ html{
     --secondary-color:#8bd3dd;
     background-color: var(--main-color);
     font-family: 'Raleway', sans-serif;
-    letter-spacing: -0.025em;
+    
 }
 p{
     color:var(--body-text-color);
     margin: 1rem 0;
     font-size:1.2em;
+    letter-spacing: 0.03em;
+    line-height: 1.8rem;
 }
-
+h1{
+    font-size:1.5em;
+}
 h2{
     color:var(--header-color);
 }
@@ -50,6 +54,8 @@ h2{
         width: 100%;
         overflow: auto;
         grid-gap:1em;
+        max-height:700px;
+        margin-top:6.5rem;
     }
     #project-description{
         grid-column: 1 /span 2;
@@ -57,11 +63,9 @@ h2{
     .container {
         margin: 20px;
     }
-    #project-description{
-        padding-top:6rem;
-    }
+
     #sources h2,#documents h2{
-        margin-bottom:1rem;
+        margin-bottom:0.8rem;
     }
     
 }
@@ -78,6 +82,7 @@ h2{
         max-width:500px;
         margin:0 auto;
         margin-bottom:3rem;
+        padding:2rem;
     }
     #project-description{
         padding-top:2rem;

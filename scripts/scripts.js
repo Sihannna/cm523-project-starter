@@ -301,8 +301,7 @@ const submit = document.getElementById('submit');
 submit.addEventListener("click", collectUserInput);
 
 function collectUserInput() {
-  let input = {
-  };
+  let input = {};
 
   goalChoices.forEach(goal => {
     if (goal.checked) {

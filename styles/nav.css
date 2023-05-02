@@ -18,11 +18,9 @@ html{
 html{
     --main-color: #fef6e4;
     --button-color:#f582ae;
-    --nav-color:#f3d2c186;
     --header-color:#001858;
     --body-text-color:#172c66;
     --background-color:#f3d2c1;
-    --secondary-color:#8bd3dd;
     background-color: var(--main-color);
     font-family: 'Raleway', sans-serif;
     letter-spacing: -0.025em;
@@ -39,13 +37,12 @@ body{
 h1{
     color:var(--header-color);
     text-align: center;
-    font-size: 200%;
-    font-weight:900
+    font-weight:900;
 }
 h3{
     color:var(--body-text-color);
     position:static;
-    font-size:150%;
+    font-size:1.5rem;
 }
 
 ul{
@@ -101,6 +98,9 @@ nav ul{
         margin-left:150px;
         height:100vh;
     }
+    h1{
+        font-size:2rem;
+    }
 }
 
 @media only screen and (max-width: 980px) {
@@ -135,9 +135,6 @@ nav ul{
 
     nav ul li {
         height: auto;
-    }
-    h1{
-        font-size:2rem;
     }
     nav ul li a span {
         font-size: 1rem;

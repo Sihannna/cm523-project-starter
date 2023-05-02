@@ -10,13 +10,6 @@ html{
    *::after {
     box-sizing: inherit;
    }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow:auto
-}
-
 html{
     --main-color: #fef6e4;
     --button-color:#f582ae;
@@ -37,7 +30,9 @@ body{
     min-height:568px;
     min-width:320px;
 }
-
+#description h3{
+    font-weight:500
+}
 
 ul{
     list-style: none;
@@ -62,8 +57,9 @@ nav ul{
 } 
 @media only screen and (min-width: 980px){
 
+
     .questions-container{
-        max-width:600px;
+        max-width:800px;
         display:flex;
         flex-direction: column;
         align-items: center; 
@@ -71,7 +67,9 @@ nav ul{
         text-align: center;    
     }
     .questions-container #description{
+        max-width:500px;
         text-align: center;
+        font-size:1.1em;
     }
 }
 @media only screen and (max-width: 980px) {
@@ -82,10 +80,8 @@ nav ul{
         height:100vh;
     }
 
-   
-
     h1{
-        font-size:4vw;
+        font-size:1.5em;
     }
 
     main{
@@ -102,27 +98,28 @@ nav ul{
         padding-top:2rem;
         overflow-y: hidden;
     }
+
 }
   
 
 
 main{
-    display:flex;
     justify-content: center;
-    height:100vh;
+    height:85vh;
     display:flex;
     align-items: center;
 }
 
 .next, .back, #submit, #start, #return{
     display:inline-block;
-    margin:0.5rem;
+    margin:1rem;
     display:hidden;
     border:none;
     color:var(--body-text-color);
     background-color: var(--background-color);
     padding:0.5rem;
     transition: 0.3s;
+    font-size:1.2rem;
 }
 #start:hover, #submit:hover, #return:hover{
     background-color: var(--button-color);
@@ -144,8 +141,7 @@ input[type="checkbox"]:checked + label, input[type="radio"]:checked + label{
     transition:0.3s;
 }
 
-
-#question1 label, #question2 label, #question3 label, #question5 label{
+label{
     font-family: 'Raleway', sans-serif;
     font-size: 130%;
     display:block;
@@ -158,26 +154,14 @@ input[type="checkbox"]:checked + label, input[type="radio"]:checked + label{
 
 label:hover{
     background-color: var(--background-color);
-
 }
+
 .grid-container{
-    display: grid;
-    grid-template-columns: repeat(3, 150px);
-    grid-template-rows: repeat(3, 150px);
-    align-items:center;
-    grid-gap: 10px;
+    display:flex;
+    flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    width:100%;
-}
 
-.grid-container label{
-    padding:1em 0;
-    color:var(--body-text-color);
-    font-size:1.3em;
 }
-
 #result{
     overflow: scroll;
 }
