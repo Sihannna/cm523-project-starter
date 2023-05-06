@@ -167,7 +167,7 @@ const allVideos = [
     goal:['stretching'],
     intensity:'low',
     duration:'under30',
-    bodyPart:['fullBody','arms','back','abs','lowerBody','upperBody'],
+    bodyPart:['fullBody','lowerBody','upperBody'],
     equipment: 'yogaMat',
     img:'https://i.ytimg.com/vi/g_tea8ZNk5A/maxresdefault.jpg',
     url:'https://www.youtube.com/watch?v=g_tea8ZNk5A',
@@ -187,7 +187,7 @@ const allVideos = [
     goal:['buildingMuscles','losingWeight'],
     intensity:'medium',
     duration:'under30',
-    bodyPart:['fullBody','arms','back','abs','upperBody'],
+    bodyPart:['fullBody','upperBody'],
     equipment: 'yogaMat',
     img:'https://i.ytimg.com/vi/DHOPWvO3ZcI/maxresdefault.jpg',
     url:'https://www.youtube.com/watch?v=DHOPWvO3ZcI',
@@ -197,7 +197,7 @@ const allVideos = [
     goal:['buildingMuscles','losingWeight'],
     intensity:'hard',
     duration:'under30',
-    bodyPart:['arms','back','abs','upperBody'],
+    bodyPart:['abs','upperBody'],
     equipment: 'yogaMat',
     img:'https://i.ytimg.com/vi/mm47bCaCzpQ/maxresdefault.jpg',
     url:'https://www.youtube.com/watch?v=mm47bCaCzpQ',
@@ -256,7 +256,7 @@ const allVideos = [
     goal:['stretching'],
     intensity:'medium',
     duration:'_30to60',
-    bodyPart:['fullBody','arms','back','upperBody','lowerBody','abs','booty','legs'],
+    bodyPart:['fullBody','upperBody','lowerBody','abs'],
     equipment:'yogaMat',
     img:'https://i.ytimg.com/vi/B682hNNuPng/maxresdefault.jpg',
     url:'https://www.youtube.com/watch?v=B682hNNuPng',
@@ -300,8 +300,13 @@ const submit = document.getElementById('submit');
 
 submit.addEventListener("click", collectUserInput);
 
+
+
 function collectUserInput() {
+
+
   let input = {};
+//       input.bodyPart =[];
 
   goalChoices.forEach(goal => {
     if (goal.checked) {
@@ -320,6 +325,7 @@ function collectUserInput() {
   });
   bodyPartChoices.forEach(bodyPart => {
     if (bodyPart.checked) {
+      // input.bodyPart.push(bodyPart.value);
       input.bodyPart = bodyPart.value;
     }
   });
@@ -329,7 +335,14 @@ function collectUserInput() {
     }
   });
   console.log(input);
-  findVideos(input);
+  if (Object.keys(input).length === 0) {
+    console.log('no data. please enter some values.');
+    alert('no data. please enter some values.')
+    // display message to user and go back to start?
+  } else {
+    findVideos(input);
+
+  }
 }
 
 function findVideos(input) {

@@ -44,7 +44,9 @@ section{
 
 .cardcontent a p{
     color:var(--body-text-color);
-    text-align:center;
+    text-align:left;
+    padding-left:1rem;
+    padding-right:1rem;
 }
 
 ul.cards{
@@ -100,6 +102,9 @@ img.card{
     .buttons button{
         width:100%;
         display:block
+    }
+    section{
+        padding:1rem;
     }
 }
 .cardcontent-shrink {

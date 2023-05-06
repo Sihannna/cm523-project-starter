@@ -67,10 +67,31 @@ nav ul{
         text-align: center;    
     }
     .questions-container #description{
-        max-width:500px;
-        text-align: center;
+        max-width:700px;
         font-size:1.1em;
     }
+    #result #video-container .pngbox {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 30px 0;
+      }
+      #result #video-container .pngbox #thumbnail {
+        display: block;
+        width:300px;
+        height: 200px;
+        object-fit: cover;
+      }
+      #result #video-container p {
+        text-align: left;
+        padding-left:1em;
+        max-width:200px;
+        color:var(--body-text-color);
+        text-decoration: none;
+      }
+    
 }
 @media only screen and (max-width: 980px) {
     body{
@@ -98,7 +119,37 @@ nav ul{
         padding-top:2rem;
         overflow-y: hidden;
     }
-
+    #result{
+        height:calc(100vh - 100px)
+    }
+    #result #video-container .pngbox {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 15px 0;
+        justify-content: center;
+      }
+    #result #video-container #resultbox{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #result #video-container .pngbox #thumbnail {
+        display: block;
+        width:300px;
+        height: 200px;
+        object-fit: cover;
+    }
+    #result #video-container .pngbox p{
+        padding:5px;
+        text-align:left;
+        max-width:300px;
+    }
+    #result h3{
+        margin-top:3rem;
+    }
 }
   
 
@@ -171,27 +222,6 @@ label:hover{
     max-width:700px;
     max-height: 600px;
 }
-  #result #video-container .pngbox {
-    width: 100%;
-    display: flex;
-    margin: auto;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 30px 0;
-  }
-  #result #video-container .pngbox #thumbnail {
-    display: block;
-    width:300px;
-    height: 200px;
-    object-fit: cover;
-  }
-  #result #video-container p {
-    text-align: left;
-    padding-left:1em;
-    max-width:200px;
-    color:var(--body-text-color);
-    text-decoration: none;
-  }
 
   a{
     color:var(--body-text-color);
